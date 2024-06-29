@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AQI Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='output.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Air Quality Index Analyzer</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/predict">Predict</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1>{{ y }}</h1>
+            <div class="right_result">
+                {% if z == 'GOOD' %}
+                    <div class="good">
+                        <img src="{{ url_for('static', filename='goog.jpeg') }}" alt="Good">
+                        GOOD
+                    </div>
+                {% elif z == 'SATISFACTORY' %}
+                    <div class="satisfactory">
+                        <img src="{{ url_for('static', filename='statisfactory.jpg') }}" alt="Satisfactory">
+                        SATISFACTORY
+                    </div>
+                {% elif z == 'MODERATELY POLLUTED' %}
+                    <div class="moderately_polluted">
+                        <img src="{{ url_for('static', filename='AQI-meter.jpng.png') }}" alt="Moderately Polluted">
+                        MODERATELY POLLUTED
+                    </div>
+                {% elif z == 'POOR' %}
+                    <div class="poor">
+                        <img src="{{ url_for('static', filename='poor.jpeg') }}" alt="Poor">
+                        POOR
+                    </div>
+                {% elif z == 'VERY POOR' %}
+                    <div class="very_poor">
+                        <img src="{{ url_for('static', filename='max.jpeg') }}" alt="Very Poor">
+                        VERY POOR
+                    </div>
+                {% else %}
+                    <div class="severe">
+                        <img src="{{ url_for('static', filename='severe.jpeg') }}" alt="Severe">
+                        SEVERE
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </main>
+</body>
+</html>
