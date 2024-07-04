@@ -1,4 +1,3 @@
-
 from flask import Flask, render_template, request
 import pickle
 import joblib
@@ -15,8 +14,12 @@ encoded = joblib.load('label_values')
 label_encoder = joblib.load('label_encoder.pkl')
 
 @app.route('/')
-def home():
+def index():
     return render_template("index.html")
+
+@app.route('/home')
+def home():
+    return render_template("home.html")
 
 @app.route('/predict')
 def predict():
@@ -72,7 +75,6 @@ def output():
             res = 'SEVERE'
 
         return render_template("output.html", y=f"AQI: {str(pred)}", z=res)
-
 
 if __name__ == "__main__":
     app.run(debug=True)

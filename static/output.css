@@ -64,7 +64,8 @@ nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     text-align: center;
-    backdrop-filter: blur(10px); /* Bur effect */
+    color:white;
+    backdrop-filter: blur(10px); /* Blur effect */
 }
 
 h1 {
@@ -148,4 +149,35 @@ main {
 
 .severe {
     color: maroon;
+}
+
+.detail {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+}
+
+.good .detail {
+    background-color: #8FBC8F;
+}
+
+.satisfactory .detail {
+    background-color: #FFD700;
+}
+
+.moderately_polluted .detail {
+    background-color: #FFA500;
+}
+
+.poor .detail {
+    background-color: #FF6347;
+}
+
+.very_poor .detail {
+    background-color: #800080;
+}
+
+.severe .detail {
+    background-color: #800000;
 }
