@@ -1,30 +1,18 @@
+
 from flask import Flask, render_template, request
 import pickle
 import joblib
 import pandas as pd
+from sklearn.preprocessing import LabelEncoder
 
 app = Flask(__name__)
 
 # Load model and encoded values
-try:
-    with open("model.pkl", "rb") as f:
-        model = pickle.load(f)
-    print("model.pkl loaded successfully.")
-except Exception as e:
-    print(f"Error loading model.pkl: {e}")
-
-try:
-    encoded = joblib.load('label_values')
-    print("label_values loaded successfully.")
-except Exception as e:
-    print(f"Error loading label_values: {e}")
+model = joblib.load(open("model_small.pkl", 'rb'))
+encoded = joblib.load('label_values')
 
 # Load the label encoder and fit with all city names
-try:
-    label_encoder = joblib.load('label_encoder.pkl')
-    print("label_encoder.pkl loaded successfully.")
-except Exception as e:
-    print(f"Error loading label_encoder.pkl: {e}")
+label_encoder = joblib.load('label_encoder.pkl')
 
 @app.route('/')
 def home():
@@ -84,6 +72,7 @@ def output():
             res = 'SEVERE'
 
         return render_template("output.html", y=f"AQI: {str(pred)}", z=res)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
