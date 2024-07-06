@@ -11,13 +11,13 @@ body {
 header {
     background-color: #616161;
     color: white;
-    padding: 10px 0;
+    padding: 10px 0; /* Reduced padding to decrease height */
 }
 
 header h1 {
     color: white;
-    margin: 0;
-    font-size: 24px;
+    margin: 0; /* Ensure no extra margin is added */
+    font-size: 24px; /* Adjust font size if needed */
 }
 
 .header-container {
@@ -26,7 +26,7 @@ header h1 {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 10px 20px;
+    padding: 10px 20px; /* Reduced padding */
 }
 
 nav ul {
@@ -56,10 +56,11 @@ nav ul li a:hover {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
-    background-color: rgba(80, 75, 77, 0.8);
+    background-color: #504B4D;
     border-radius: 8px;
+    background-color: rgba(80, 75, 77, 0.8); /* Transparent background */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); /* Blur effect */
 }
 
 h1 {
@@ -80,16 +81,17 @@ select {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: calc(100% - 22px);
-    background-color: rgba(80, 75, 77, 0.8);
-    color: white;
+    width: calc(100% - 22px); /* Adjust for padding and border */
+    background-color: rgba(80, 75, 77, 0.8); /* Match container background color */
+    color: white; /* Set text color to white */
 }
 
 input[type="text"]::placeholder,
 input[type="number"]::placeholder,
-input[type="date"]::placeholder {
+input[type="date"]::placeholder,
+select {
     font-weight: bold;
-    color: #ccc;
+    color: #ccc; /* Set placeholder color to a lighter shade for visibility */
 }
 
 input[type="date"] {
