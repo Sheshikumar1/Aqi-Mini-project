@@ -48,8 +48,5 @@ Contributing
 
 Contributions are welcome! Please fork the repository and create a pull request with your changes. For major changes, please open an issue first to discuss what you would like to change.
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 Contact
 For any questions or feedback, please contact sheshikumarerraboina@gmail.com.
