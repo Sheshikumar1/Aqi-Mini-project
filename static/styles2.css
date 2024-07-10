@@ -108,7 +108,7 @@ nav ul li a:hover {
     border-radius: 10px;
     object-fit: cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 80px; /* Add top margin to avoid header overlap */
+    margin-top: 20px; /* Add top margin to avoid header overlap */
 }
 
 .button {
